@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>📑 סורק משימות סריקה בתבל</h3>
+        </div>
+
+        <!-- אזור העלאת הקבצים המעוצב -->
+        <label class="file-drop-area">
+            <span class="drop-icon">📁</span>
+            <span class="drop-text">לחץ לבחירת קבצים (XML + PDF)</span>
+            <!-- כאן הכנסתי את התמיכה גם ב-PDF בתוך הכפתור המעוצב -->
+            <input type="file" id="filePicker" accept=".xml, .pdf" multiple>
+        </label>
+        
+        <div id="fileInfo" class="file-info">טרם נבחרו קבצים</div>
+        
+        <button id="startBatch" disabled>🚀 התחל סריקה אוטומטית</button>
+       
+        <div id="statusList" class="status-list">
+            <div class="empty-state">הרשימה תופיע כאן...</div>
+        </div>
+       
+        <div id="summaryArea" class="summary-box" style="display:none;">
+            <div class="summary-item">
+                <span class="summary-label">נבדקו סה"כ:</span>
+                <span id="totalChecked" class="summary-value">0</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">טופלו בהצלחה:</span>
+                <span id="totalFound" class="summary-value highlight">0</span>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
